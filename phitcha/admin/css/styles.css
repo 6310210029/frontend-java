@@ -317,6 +317,7 @@ select {
 
 select {
   word-wrap: normal;
+ 
 }
 select:disabled {
   opacity: 1;
@@ -13174,3 +13175,16 @@ button {
   color: #cc0000;
 }
 
+/* Style the dropdown button */
+.custom-select {
+  padding: 6px; 
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+}
+
+/* Style the options in the dropdown */
+.custom-select option {
+  padding: 10px; /* Some padding */
+}
