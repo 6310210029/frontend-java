@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="../image/SCC.BK.png" />
+        <title>Administrator The Siam Cement (Thung Song) Co.,Ltd.</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-NToHRk5JcjMqM7i+W9M6Bq6oz4LMKyYyVLH/wt+glMtsRwXT9ZbHv+en+Tt+JBkS3" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="../admin/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="../New folder/css/bootstrap.min.css" ></script>
+        <script src="../New folder/js/bootstrap.min.js" ></script>
+        <script src = "../New folder/js/bootstrap.bundle.min.js"></script>
+        <script src="../New folder/js/simple-datatables.min.js"></script>  
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <a class="navbar-brand ps-3" href="administrator.html">Administrator
+            </a>
+
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            </form>
+       
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link" id="navbarDropdown" href="../../index.html" role="button" aria-expanded="false">
+                        <button class="btn btn-warning"><i class="fa fa-sign-out" style="font-size: 1.2em; position:relative;  top:2px;" ></i></button> 
+                    </a>
+                </li>
+            </ul>
+    </nav>
+    
+</nav>
+
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav"> <br>
+                    <a class="nav-link active"  aria-current="page"  href="administrator.html">
+                        <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                    Admin Management
+                    </a>
+
+                    <a class="nav-link"  href="report_homepage.html">
+                        <div class="sb-nav-link-icon"><i class="fas fa-print"></i></div>
+                    Report Homepage
+                    </a>
+
+                    <a class="nav-link " href="report_role.html">
+                        <div class="sb-nav-link-icon"><i class="fas fa-print"></i></div>
+                    Report Role
+                    </a>
+
+                </div>
+            </div>
+            <div class="sb-sidenav-footer"  style="font-size: 13px;">
+                <img src="../image/footer-logo.png" alt="" style="width: 160px; height: auto;"> <br>
+                The Siam Cement (Thung Song) Co.,Ltd.
+            </div>
+        </nav>
+    </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4" >
+                        <div  class="mt-4" >
+                        <h1 > Admin Management  </h1>
+                        
+                        <form class="myForm1" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+                            <label>ID :
+                                <input type="text" name="Link_name" required value="kansuda4208">&nbsp;
+                                <i class="fa-solid fa-magnifying-glass fa-rotate-90 edit-icon" onclick="openEditPopup()" ></i>
+                            </label>
+                          
+                        </form>
+                    </div>
+                  <br>
+                        <div class="card mb-3">
+                            &nbsp;
+                            <form id="permissionsForm2" class="permissionsForm">
+                                <label class="main-label1"> &nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" class="selectAll" onchange="selectAllPermissions(2)">
+                                    <span class="checkmark"></span> &nbsp; Admin Role  
+                                </label><br>
+                                <span style="margin-left: 140px; font-size: 16px;">จัดการสิทธิ์การมองเห็น Local App, SCG App, ERP Other Company, IT Support</span><br>
+                                <br>
+                                
+                                <label class="sub-label1 " onclick="toggleSubLabel(this)"> 
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="read">
+                                    <span class="checkmark"></span> &nbsp;  Local Application  &nbsp; <img src="../image/STShead.png">
+                                </label>
+                                <br>  <br>
+
+                          
+                                <label class="sub-label1 " onclick="toggleSubLabel(this)"> 
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="read">
+                                    <span class="checkmark"></span> &nbsp; SCG Application  &nbsp;<img src="../image/SCGhead.png">
+                                </label>
+                                <br>  <br>
+                          
+                           
+                                <label class="sub-label1 " onclick="toggleSubLabel(this)"> 
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="read">
+                                    <span class="checkmark"></span> &nbsp; ERP Other  &nbsp;<img src="../image/FocusOneERP.png" style="max-width: 3.3em; height: auto;">
+                                </label>
+                                <br>   <br>
+                          
+
+                            <form id="permissionsForm2" class="permissionsForm">
+                                <label class="sub-label1 " onclick="toggleSubLabel(this)"> 
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="read">
+                                    <span class="checkmark"></span> &nbsp; IT Support  &nbsp;<img src="../image/IThead.png" style="max-width: 2.2em; height: auto;">
+                                </label>
+                            </form>
+                        </form>
+                           
+                       
+
+                            <form id="permissionsForm3" class="permissionsForm">
+                                <label class="main-label1"> &nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" class="selectAll" onchange="selectAllPermissions(3)">
+                                    <span class="checkmark"></span> &nbsp; Admin Homepage  
+                                </label> <br>
+                                <span style="margin-left: 140px; font-size: 16px;" >จัดการในส่วน Homepage แก้ไขรูปภาพ Header , แก้ไขประกาศ , แก้ไขข่าวสารโรงปูนทุ่งสง, แก้ไขกิจกรรม ,เพิ่มข้อมูลแนะนำสมาชิกใหม่ </span> <br>
+                                
+                           <br>
+                           
+                                <label class="sub-label1" onclick="toggleSubLabel(this)">
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="additionalSubPermission">
+                                    <span class="checkmark"></span> &nbsp; Header Management
+                                </label>  <br>  <br>
+                              
+                           
+                                <label class="sub-label1" onclick="toggleSubLabel(this)">
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="additionalSubPermission">
+                                    <span class="checkmark"></span> &nbsp; Announce Management
+                                </label>  <br>  <br>
+                            
+                                <label class="sub-label1"onclick="toggleSubLabel(this)">
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="additionalSubPermission">
+                                    <span class="checkmark"></span> &nbsp; Thungsong New Management
+                                </label>  <br>  <br>
+                              
+                            
+                                <label class="sub-label1" onclick="toggleSubLabel(this)">
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="additionalSubPermission">
+                                    <span class="checkmark"></span> &nbsp; Activity Management
+                                </label>  <br>  <br>
+                              
+                            
+                                <label class="sub-label1" onclick="toggleSubLabel(this)">
+                                    <input type="checkbox" class="subCheckbox" name="permission" value="additionalSubPermission">
+                                    <span class="checkmark"></span> &nbsp; New Member Management
+                                </label>  <br>  <br>
+                           
+                            </form>
+                            <br>
+                        </form>
+                        </div>
+                        <button type="submit" class="save-button" onclick="showPopup()">Save</button>
+                        <button type="submit" class="cancle-button">Cancle</button>
+                    </div> 
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <br> <br> <br> <br> <br>
+            </div>
+        </div>
+    </body>
+    </html>
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+    <script>
+        function selectAllPermissions(formIndex) {
+            var selectAllCheckbox = document.querySelector(`#permissionsForm${formIndex} .selectAll`);
+            var subCheckboxes = document.querySelectorAll(`#permissionsForm${formIndex} .subCheckbox`);
+    
+            for (var i = 0; i < subCheckboxes.length; i++) {
+                subCheckboxes[i].checked = selectAllCheckbox.checked;
+            }
+        }
+    
+        function toggleSubLabel(label) {
+            label.classList.toggle('clicked');
+            var subCheckbox = label.querySelector('.subCheckbox');
+            subCheckbox.checked = !subCheckbox.checked;
+    
+            updateMainCheckbox(label);
+        }
+    
+        function updateMainCheckbox(label) {
+            var subCheckboxes = label.parentElement.querySelectorAll('.subCheckbox');
+            var mainCheckbox = label.parentElement.querySelector('.main-label1 input');
+    
+            var atLeastOneChecked = Array.from(subCheckboxes).some(subCheckbox => subCheckbox.checked);
+            mainCheckbox.checked = atLeastOneChecked;
+        }
+    </script>
+       

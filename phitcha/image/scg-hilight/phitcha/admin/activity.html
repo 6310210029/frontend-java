@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="../image/SCC.BK.png" />
+        <title>AdminHomepage The Siam Cement (Thung Song) Co.,Ltd.</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-NToHRk5JcjMqM7i+W9M6Bq6oz4LMKyYyVLH/wt+glMtsRwXT9ZbHv+en+Tt+JBkS3" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" integrity="sha512-gi9JxQ1TWYPJKWyGAf6UMQrYio1Ft32Pyi/iNFGp2NR5yyzZJxXwyNkkUJnV1F7qvhca/JtnTqqkFRMyCfbFTw==" crossorigin="anonymous" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="New folder/css/bootstrap.min.css" ref="stylesheet">
+        <script src = "New folder/js/bootstrap.bundle.min.js"></script>
+        <script src="./New folder/js/simple-datatables.min.js"></script>  
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+          
+            <a class="navbar-brand ps-3" href="header.html">Admin Homepage
+            </a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link" id="navbarDropdown" href="admin_setup.html" role="button" aria-expanded="false">
+                        <i class="fa fa-sign-out" style="font-size: 1.5em;"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <br>
+                            <a class="nav-link "  href="header.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-image me-1"></i></div>
+                                Header Management
+                            </a>
+                           
+                            <a class="nav-link " href="announce.html" >
+                                <div class="sb-nav-link-icon"><i class="fa fa-bullhorn"></i></div>
+                                Announce Management
+                                <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
+                            </a>
+                            <!-- <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">*</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">*</a>
+                                </nav>
+                            </div> -->
+                            <a class="nav-link" href="thungsongnew.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-newspaper"></i></div>
+                                ThungSong New Management
+                               
+                            </a>
+            
+                            <a class="nav-link active"  aria-current="page" href="activity.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Activity Management
+                            </a>
+                            <a class="nav-link" href="newmember.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                New Members Management
+                            </a>
+                            
+                            <a class="nav-link" href="report.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-print"></i></div>
+                                Report
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        
+                        The Siam Cement (Thung Song) Co.,Ltd.
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Activity Management</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">** รูปภาพควรมีขนาดกว้าง 800 px * สูง 1132 px  </li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table"></i>
+                                Activity 
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple" class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Subject</th>
+                                            <th>Description</th>
+                                            <th>Link</th>
+                                            <th>Image</th>
+                                            <th>Download</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        
+                                            
+                                        </tr>
+                                    </thead>
+                              
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            </td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                           
+                                           
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                         
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                           
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                            
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                        
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                         
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                           
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Subject</td>
+                                            <td>Description</td>
+                                            <td>Link</td>
+                                            <td><img src="../image/activity/activity.jpg" alt="Image" style="max-width: 200px; max-height: 200px; cursor: pointer;" onclick="openImageModal(this.src)"></td>
+                                            <td><a href="path/to/download/file" download><i class="fas fa-download" style="font-size: 1.4em; margin-top: 5px; "></i></a></td>
+                                            <td><button class="btn btn-primary edit-btn" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-danger" onclick="confirmDelete()"><i class="fas fa-trash-alt"></i></button></td>
+                                            
+                                            
+                                        </tr>
+                                <!-- Large Image Preview -->
+                                    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="imageModalLabel">Large Image Preview</h5>
+                                                
+                                                    </div>
+                                                    
+                                                <div class="modal-body">
+                                                    <img id="modalImage" src="" alt="Large Image Preview" style="max-width: 700px; max-height: 700px;">
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                <!-- Edit Modal -->
+                                        <div class="modal fade" id="editModal-1" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="editModalLabel">Edit Activity</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="mb-3">
+                                                            <label for="editedDescription" class="form-label">Subject</label>
+                                                            <input type="text" id="editedDescription" class="form-control">
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="editedLink" class="form-label">Description</label>
+                                                            <input type="text" id="editedLink" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="editedLink" class="form-label">Link</label>
+                                                            <input type="text" id="editedLink" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="editedLink" class="form-label">Image</label>
+                                                            <form class="imgForm" action="leanform.php" method="post" enctype="multipart/form-data">
+                                                                <input type="file" name="upload" id="fileInput" onchange="previewImage()" />
+                                                              
+                                                            </form>
+                                                            <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; max-height: 200px; display: none;" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary" onclick="saveChanges(1)">Save Changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            function openImageModal(imageSrc) {
+                var modalImage = document.getElementById('modalImage');
+                modalImage.src = imageSrc;
+                $('#imageModal').modal('show');
+            }
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dataTable = new simpleDatatables.DataTable('#datatablesSimple', {
+                    perPage: 5, 
+                   
+                });
+            });
+        </script>
+<script>
+    $(document).ready(function() {
+        $('.toggle-eye').click(function() {
+            $(this).toggleClass('far fa-eye far fa-eye-slash');
+        });
+    });
+</script>
+        
+        <script>
+            function openEditModal(rowNumber) {
+                console.log("Modal opened for row", rowNumber);
+                // Update the modal ID dynamically based on the row number
+                $('#editModal-' + rowNumber).modal('show');
+            }
+        
+            function saveChanges(rowNumber) {
+                // Add logic to save changes here
+                // For example, update the table cell with the edited value
+                var editedTitle = document.getElementById('editedTitle').value;
+                document.querySelector('td:nth-child(2)').innerText = editedTitle;
+        
+                // Close the modal
+                $('#editModal-' + rowNumber).modal('hide');
+            }
+        </script>
+        <script>
+            function checkInput() {
+                var inputText = document.getElementById("customer_name").value;
+                var hiddenText = document.getElementById("hiddenText");
+    
+                if (inputText.trim() !== "") {
+                    hiddenText.style.display = "none";
+                } else {
+                    hiddenText.style.display = "inline";
+                }
+            }
+        </script>
+        <script>
+            function previewImage() {
+                var fileInput = document.getElementById('fileInput');
+                var imagePreview = document.getElementById('imagePreview');
+        
+                if (fileInput.files && fileInput.files[0]) {
+                    var reader = new FileReader();
+        
+                    reader.onload = function (e) {
+                        imagePreview.src = e.target.result;
+                        imagePreview.style.display = 'block';
+                    };
+        
+                    reader.readAsDataURL(fileInput.files[0]);
+                }
+            }
+        </script>
+ <script>
+    function confirmDelete() {
+        var isConfirmed = window.confirm("คุณยืนยันที่จะลบข้อมูลนี้หรือไม่ ?");
+        
+        if (isConfirmed) {
+            alert("ลบเรียบร้อยแล้ว");
+        } else {
+            alert("ยกเลิกการลบ");
+        }
+    }
+</script>
+    </body>
+</html>
